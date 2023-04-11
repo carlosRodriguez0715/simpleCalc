@@ -22,6 +22,6 @@
       <Button fx:id="dot" layoutX="109.0" layoutY="452.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;" text="." />
       <Button fx:id="eq" layoutX="193.0" layoutY="452.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;" text="=" />
       <Button fx:id="add" layoutX="299.0" layoutY="452.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;" text="-" />
-      <TextArea fx:id="txtArea" editable="false" layoutX="24.0" layoutY="38.0" prefHeight="119.0" prefWidth="347.0" style="background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;" />
+      <TextArea fx:id="txtArea" editable="false" layoutX="24.0" layoutY="38.0" prefHeight="119.0" prefWidth="347.0" style="-fx-control-inner-background:#00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;" />
    </children>
 </AnchorPane>

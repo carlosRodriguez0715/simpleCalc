@@ -12,7 +12,54 @@ public class CalculatorController {
 	@FXML private TextArea txtArea;
 	
 	@FXML private void initialize() {
-		
+		//btn9 hover on and off
+		this.btn9.setOnMouseEntered(e -> this.btn9.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn9.setOnMouseExited(e -> this.btn9.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//btn8 hover on and off
+		this.btn8.setOnMouseEntered(e -> this.btn8.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn8.setOnMouseExited(e -> this.btn8.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//btn7 hover on and off
+		this.btn7.setOnMouseEntered(e -> this.btn7.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn7.setOnMouseExited(e -> this.btn7.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//btn6 hover on and off
+		this.btn6.setOnMouseEntered(e -> this.btn6.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn6.setOnMouseExited(e -> this.btn6.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//btn5 hover on and off
+		this.btn5.setOnMouseEntered(e -> this.btn5.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn5.setOnMouseExited(e -> this.btn5.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//btn4 hover on and off
+		this.btn4.setOnMouseEntered(e -> this.btn4.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn4.setOnMouseExited(e -> this.btn4.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//btn3 hover on and off
+		this.btn3.setOnMouseEntered(e -> this.btn3.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn3.setOnMouseExited(e -> this.btn3.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//btn2 hover on and off
+		this.btn2.setOnMouseEntered(e -> this.btn2.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn2.setOnMouseExited(e -> this.btn2.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//btn1 hover on and off
+		this.btn1.setOnMouseEntered(e -> this.btn1.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn1.setOnMouseExited(e -> this.btn1.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//btn0 hover on and off
+		this.btn0.setOnMouseEntered(e -> this.btn0.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.btn0.setOnMouseExited(e -> this.btn0.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//eq hover on and off
+		this.eq.setOnMouseEntered(e -> this.eq.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.eq.setOnMouseExited(e -> this.eq.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//div hover on and off
+		this.div.setOnMouseEntered(e -> this.div.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.div.setOnMouseExited(e -> this.div.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//mul hover on and off
+		this.mul.setOnMouseEntered(e -> this.mul.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.mul.setOnMouseExited(e -> this.mul.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//sub hover on and off
+		this.sub.setOnMouseEntered(e -> this.sub.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.sub.setOnMouseExited(e -> this.sub.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//add hover on and off
+		this.add.setOnMouseEntered(e -> this.add.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.add.setOnMouseExited(e -> this.add.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		//dot hover on and off
+		this.dot.setOnMouseEntered(e -> this.dot.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.dot.setOnMouseExited(e -> this.dot.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
 	}
-
+	
 }
