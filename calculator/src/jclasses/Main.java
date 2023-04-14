@@ -1,3 +1,7 @@
+/**
+ * @author: Carlos Rodriguez
+ * Class executes application. */
+
 package jclasses;
 
 import javafx.application.Application;

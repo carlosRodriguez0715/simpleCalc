@@ -1,15 +1,27 @@
+/**
+ * @author: Carlos Rodriguez
+ * Class handles every element of the fxml file as well as
+ * arithmetic operations. */
+
 package controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 
 public class CalculatorController {
 	
 	@FXML private AnchorPane basePane;
-	@FXML private Button btn9, btn8, btn7, btn6, btn5, btn4, btn3, btn2, btn1, btn0, eq, dot, div, mul, sub, add;
+	@FXML private Button btn9, btn8, btn7, btn6, btn5, btn4, btn3, btn2, btn1, btn0, eq, clear, div, mul, sub, add;
 	@FXML private TextArea txtArea;
+	@FXML private Label opLabel, resultLabel;
+	private char op;
+	private int result;
 	
 	@FXML private void initialize() {
 		//btn9 hover on and off
@@ -58,8 +70,88 @@ public class CalculatorController {
 		this.add.setOnMouseEntered(e -> this.add.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
 		this.add.setOnMouseExited(e -> this.add.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
 		//dot hover on and off
-		this.dot.setOnMouseEntered(e -> this.dot.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
-		this.dot.setOnMouseExited(e -> this.dot.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.clear.setOnMouseEntered(e -> this.clear.setStyle("-fx-background-color: #029e89; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		this.clear.setOnMouseExited(e -> this.clear.setStyle("-fx-background-color: #00ffee; -fx-border-color: #faa21e; -fx-border-width: 10;"));
+		
+		this.result = 0;
+		this.op = 'a';
 	}
+	
+	@FXML private void print(ActionEvent ae) {
+		Object obj = ae.getSource();
+		Button b = (Button) obj;
+		if(obj.equals(this.add) || obj.equals(this.sub) || obj.equals(this.mul) || obj.equals(this.div) || obj.equals(this.eq) || obj.equals(this.clear)) {
+			if(obj.equals(this.add)) {
+				if(this.result == 0) {
+					this.result = Integer.parseInt(this.opLabel.getText());
+				}
+				this.op = 'a';
+				this.opLabel.setText("");
+			}
+			if(obj.equals(this.sub)) {
+				if(this.result == 0) {
+					this.result = Integer.parseInt(this.opLabel.getText());
+				}
+				this.op = 's';
+				this.opLabel.setText("");
+			}
+			if(obj.equals(this.mul)) {
+				if(this.result == 0) {
+					this.result = Integer.parseInt(this.opLabel.getText());
+				}
+				this.op = 'm';
+				this.opLabel.setText("");
+			}
+			if(obj.equals(this.div)) {
+				if(this.result == 0) {
+					this.result = Integer.parseInt(this.opLabel.getText());
+				}
+				this.op = 'd';
+				this.opLabel.setText("");
+			}
+			if(obj.equals(this.clear)) {
+				this.result = 0;
+				this.opLabel.setText("");
+				this.resultLabel.setText("");
+			}
+			if(obj == this.eq) {
+				switch(this.op) {
+					case 'a':
+						this.result += Integer.parseInt(this.opLabel.getText());
+						this.resultLabel.setText("" + this.result);
+						break;
+					case 's':
+						this.result -= Integer.parseInt(this.opLabel.getText());
+						this.resultLabel.setText("" + this.result);
+						break;
+					case 'm':
+						this.result *= Integer.parseInt(this.opLabel.getText());
+						this.resultLabel.setText("" + this.result);
+						break;
+					case 'd':
+						int dividedBy = Integer.parseInt(this.opLabel.getText());
+						if(dividedBy == 0) {
+							Alert alert = new Alert(AlertType.ERROR);
+							alert.setContentText("Can't divide by 0, try another number!");
+							alert.showAndWait();
+						}
+						else {
+							this.result /= Integer.parseInt(this.opLabel.getText());
+							this.resultLabel.setText("" + this.result);
+						}
+						break;
+				}
+				this.opLabel.setText("");
+			}
+		}
+		
+		else {
+			if(this.opLabel.getText().length() < 9) {
+				this.opLabel.setText(this.opLabel.getText() + b.getText());
+			}
+		}
+		
+	}
+
 	
 }
